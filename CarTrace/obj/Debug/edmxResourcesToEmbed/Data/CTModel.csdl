@@ -33,5 +33,6 @@
     <Property Name="Capacity" Type="Int32" Nullable="false" />
     <Property Name="Color" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="FactInterval" Type="Double" Nullable="false" />
+    <Property Name="Tob" Type="Double" />
   </EntityType>
 </Schema>

@@ -19,5 +19,6 @@ namespace CarTrace.Data
         public int Capacity { get; set; }
         public string Color { get; set; }
         public double FactInterval { get; set; }
+        public Nullable<double> Tob { get; set; }
     }
 }

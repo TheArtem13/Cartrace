@@ -25,6 +25,7 @@
     <EntitySetMapping Name="Buses">
       <EntityTypeMapping TypeName="CarTraceModel.Bus">
         <MappingFragment StoreEntitySet="Buses">
+          <ScalarProperty Name="Tob" ColumnName="Tob" />
           <ScalarProperty Name="FactInterval" ColumnName="FactInterval" />
           <ScalarProperty Name="Color" ColumnName="Color" />
           <ScalarProperty Name="Capacity" ColumnName="Capacity" />

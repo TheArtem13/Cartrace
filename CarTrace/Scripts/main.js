@@ -194,14 +194,14 @@ function GetTraficVolumeChart() {
                 yAxis: {
                     min: 0,
                     title: {
-                        text: 'Population (millions)'
+                        text: ''
                     }
                 },
                 legend: {
                     enabled: false
                 },
                 tooltip: {
-                    pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
+                    pointFormat: ': <b>{point.y:.1f}</b>'
                 },
                 series: [{
                     name: 'Маршруты и загруженность',
@@ -273,7 +273,7 @@ function GetSprosChart() {
                         }
                     },
                     title: {
-                        text: 'Temperature',
+                        text: '',
                         style: {
                             color: Highcharts.getOptions().colors[1]
                         }
@@ -339,7 +339,7 @@ function GetAnalitycsData() {
         data: {
         },
         success: function (data) {
-            
+            $('#tableContainer').html(data);
         }
     });
 }

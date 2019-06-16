@@ -14,6 +14,7 @@
           <Property Name="Capacity" Type="int" Nullable="false" />
           <Property Name="Color" Type="nvarchar(max)" Nullable="false" />
           <Property Name="FactInterval" Type="float" Nullable="false" />
+          <Property Name="Tob" Type="float" />
         </EntityType>
         <EntityType Name="BusStops">
           <Key>
@@ -76,6 +77,7 @@
           <Property Name="Capacity" Type="Int32" Nullable="false" />
           <Property Name="Color" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="FactInterval" Type="Double" Nullable="false" />
+          <Property Name="Tob" Type="Double" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -107,6 +109,7 @@
           <EntitySetMapping Name="Buses">
             <EntityTypeMapping TypeName="CarTraceModel.Bus">
               <MappingFragment StoreEntitySet="Buses">
+                <ScalarProperty Name="Tob" ColumnName="Tob" />
                 <ScalarProperty Name="FactInterval" ColumnName="FactInterval" />
                 <ScalarProperty Name="Color" ColumnName="Color" />
                 <ScalarProperty Name="Capacity" ColumnName="Capacity" />

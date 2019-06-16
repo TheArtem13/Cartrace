@@ -9,6 +9,7 @@
     <Property Name="Capacity" Type="int" Nullable="false" />
     <Property Name="Color" Type="nvarchar(max)" Nullable="false" />
     <Property Name="FactInterval" Type="float" Nullable="false" />
+    <Property Name="Tob" Type="float" />
   </EntityType>
   <EntityType Name="BusStops">
     <Key>

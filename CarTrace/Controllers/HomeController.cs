@@ -143,9 +143,29 @@ namespace CarTrace.Controllers
             var model = JsonConvert.SerializeObject(sprosList);
             return Content(model);
         }
-        //public ActionResult GetAnalitycsData()
-        //{
-
-        //}
+        public ActionResult GetAnalitycsData()
+        {
+            var model = new List<RecomendModel>();
+            model = new List<RecomendModel>();
+            using (var data = new CarTEntities())
+            {
+                foreach(var bus in data.Buses.ToList())
+                {
+                    var i = new RecomendModel();
+                    i.bus = bus.Number;
+                    var posadki = data.Trips
+                        .Where(x => x.BusId == bus.Number)
+                        .GroupBy(x => x.StartId)
+                        .ToList();
+                    var Qmax = posadki.Max(x => x.Count());
+                    i.Afact = bus.Tob.Value / 2 / bus.FactInterval;
+                    i.Am = Qmax * bus.Tob.Value / bus.Capacity;
+                    i.I = bus.Tob.Value / i.Am;
+                    i.Ifact = bus.FactInterval * 60.0;
+                    model.Add(i);
+                }
+            }
+            return PartialView("GetAnalitycsData", model);
+        }
     }
 }
