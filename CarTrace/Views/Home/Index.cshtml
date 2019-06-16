@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "CarTrace";
+}
+@model CarTrace.Models.MainModel
+<div class="row">
+    <div class="col-md-12">
+        <h2>Фактические данные по трафику общественного транспорта</h2>
+        <div style="width: 100%; height: 600px" id="mapContainer"></div>
+        <br />
+        <ul>
+            @foreach (var bus in Model.Buses)
+            {
+                <li>
+                    <strong style="color:#@bus.Color">@bus.Number</strong>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <br />
+    <div class="col-md-12">
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        <br />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" id="analitics" >
+        <h2 style="margin-top: 30px;">Аналитические данные</h2>
+        <div style="min-height: 500px;">
+            <div id="containerSprosAnalitycs" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            <br />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Рекоммендации</h2>
+
+    </div>
+</div>

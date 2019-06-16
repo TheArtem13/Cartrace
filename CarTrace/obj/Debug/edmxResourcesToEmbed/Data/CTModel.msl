@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище CarTraceModelContainer" CdmEntityContainer="CarTEntities">
+    <EntitySetMapping Name="BusStops">
+      <EntityTypeMapping TypeName="CarTraceModel.BusStop">
+        <MappingFragment StoreEntitySet="BusStops">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Longtitude" ColumnName="Longtitude" />
+          <ScalarProperty Name="Lattitude" ColumnName="Lattitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trips">
+      <EntityTypeMapping TypeName="CarTraceModel.Trip">
+        <MappingFragment StoreEntitySet="Trips">
+          <ScalarProperty Name="BusId" ColumnName="BusId" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FinishId" ColumnName="FinishId" />
+          <ScalarProperty Name="StartId" ColumnName="StartId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Buses">
+      <EntityTypeMapping TypeName="CarTraceModel.Bus">
+        <MappingFragment StoreEntitySet="Buses">
+          <ScalarProperty Name="FactInterval" ColumnName="FactInterval" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
